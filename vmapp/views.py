@@ -123,7 +123,7 @@ def getMessage(request):
         ipaddress, hostname, statusCode = getMessageFromWebServer(choosenServer)
         print("Redirect to server: "+choosenServer)
     response_data = {}
-    response_data['ipaddress'] = ipaddress
+    response_data['server'] = choosenServer
     response_data['hostname'] = hostname
     response_data['statusCode'] = statusCode
     return JsonResponse(response_data)
